@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-jar-buttons',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./jar-buttons.component.css']
 })
 export class JarButtonsComponent implements OnInit {
+
+  @Input() 
+  disabled!: 'left' | 'right' | null;
 
   constructor() { }
 

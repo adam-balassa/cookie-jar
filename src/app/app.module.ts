@@ -13,6 +13,7 @@ import { GiveComplimentComponent } from './components/give-compliment/give-compl
 import { AddButtonComponent } from './components/give-compliment/add-button/add-button.component';
 import { FormsModule } from '@angular/forms';
 import { ComplimentAddedComponent } from './pages/compliment-added/compliment-added.component';
+import { FirstPageComponent } from './pages/tutorial/first-page/first-page.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ComplimentAddedComponent } from './pages/compliment-added/compliment-ad
     GiveComponent,
     GiveComplimentComponent,
     AddButtonComponent,
-    ComplimentAddedComponent
+    ComplimentAddedComponent,
+    FirstPageComponent
   ],
   imports: [
     BrowserModule,
