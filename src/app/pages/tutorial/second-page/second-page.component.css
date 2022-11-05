@@ -1,0 +1,77 @@
+
+.container-fluid {
+  background-color: var(--yellow);
+  height: 100vh;
+  padding: 20px
+}
+
+.tutorial-card {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+  background-color: white;
+  position: relative;
+  height: 60vh;
+  animation: slide-down .4s;
+  position: relative;
+}
+
+.tutorial-text {
+  font-size: 20px;
+  margin: 67px 39px 0px 39px;
+}
+
+.image-container {
+  position: absolute;
+  height: 188px;
+  bottom: -120px;
+  left: 20px;
+}
+
+.button-container {
+  animation: appear .5s;
+}
+
+.jar-buttons-container {
+  height: 63px;
+  width: 120px;
+  font-size: 8px;
+  margin: 20px
+}
+
+.next-button {
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 4px 4px #0004;
+  border-radius: 20px;
+  padding: 16px 0
+}
+
+.next-button:active {
+  background-color: white;
+}
+@keyframes slide-down {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

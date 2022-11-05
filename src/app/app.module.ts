@@ -14,6 +14,9 @@ import { FormsModule } from '@angular/forms';
 import { ComplimentAddedComponent } from './pages/compliment-added/compliment-added.component';
 import { FirstPageComponent } from './pages/tutorial/first-page/first-page.component';
 import { GetComponent } from './pages/get/get.component';
+import { SecondPageComponent } from './pages/tutorial/second-page/second-page.component';
+import { ThirdPageComponent } from './pages/tutorial/third-page/third-page.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,12 +30,15 @@ import { GetComponent } from './pages/get/get.component';
     AddButtonComponent,
     ComplimentAddedComponent,
     FirstPageComponent,
+    SecondPageComponent,
+    ThirdPageComponent,
     GetComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
