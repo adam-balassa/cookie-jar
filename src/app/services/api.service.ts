@@ -21,9 +21,11 @@ export class ApiService {
   }
 
   async getSurprise(): Promise<string> {
+    const keyWords = ['personality', 'looks', 'achievements', 'school work', 'social circle', 'life'];
+    const keyword = keyWords[Math.floor(Math.random() * keyWords.length)]
     const response = await this.http.post<{compliment_input: {text: string}[]}>(
       'https://407eknu174.execute-api.us-east-1.amazonaws.com/prod/generation',
-      { keyword_i: 'personality' }
+      { keyword_i: keyword }
     ).toPromise();
     return response?.compliment_input[0].text || 'Have a nice a day';
   }

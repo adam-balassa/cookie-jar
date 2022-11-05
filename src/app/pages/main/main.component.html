@@ -7,4 +7,6 @@
     <app-invite-button></app-invite-button>
   </div>
 </div>
-<app-first-page></app-first-page>
+<div *ngIf="!tutorial.tutorialDone.value">
+  <app-first-page></app-first-page>
+</div>

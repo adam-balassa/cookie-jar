@@ -8,7 +8,7 @@ import { ComplimentService } from './services/compliment.service';
 })
 export class AppComponent {
   title = 'cookie-jar';
-  constructor(public complimentService: ComplimentService) {
+  constructor() {
     
   }
 }

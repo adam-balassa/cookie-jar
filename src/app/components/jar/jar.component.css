@@ -15,10 +15,22 @@
 .jar-title-container {
   position: absolute;
   top: 13%;
+  font-size: 30px;
 }
 
-h1 {
-  font-size: 30px;
+.jar-title-container textarea {
+  border: none;
+  background-color: transparent;
+  resize: horizontal;
+}
+
+.jar-title-container textarea.empty {
+  border-bottom: solid 2px black;
+}
+
+.jar-title-container span {
+  bottom: 15px;
+  position: relative;
 }
 
 @keyframes appear {

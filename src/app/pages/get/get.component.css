@@ -10,7 +10,9 @@
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
   background-color: white;
   position: relative;
-  height: 50vh;
+  min-height: 50vh;
+  max-height: 80vh;
+  overflow-y: auto;
   animation: slide-down .4s;
 }
 
@@ -23,7 +25,8 @@ div {
 }
 
 .compliment-text {
-  padding: 38px 22px;
+  flex: 1;
+  padding: 10px 22px;
 }
 
 .share {
@@ -35,8 +38,6 @@ div {
 }
 
 .compliment-footer {
-  bottom: 0;
-  position: absolute;
   width: 100%;
 }
 

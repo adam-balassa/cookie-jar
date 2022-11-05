@@ -9,7 +9,7 @@ const suggestions = [
   "I don’t think about that too often but I am ", 
   "I do a lot of thing that I don’t give myself credit for anymore, but, today I ", 
   "The best thing that I enjoyed today with my senses is ", 
-  "I would be sad if I lived without ", 
+  "I'm so lucky to have ", 
   "Today, I am really appreciative of "
 ]
 
