@@ -76,11 +76,17 @@
   }
 }
 
-
-@media screen and (max-width: 450px){
+@media screen and (max-width: 440px){
+  .tutorial-text{
+      font-size: 18px;
+      margin: 20px;
+      margin-bottom: 0px;
+  }
+}
+@media screen and (max-width: 380px){
   .tutorial-text{
       font-size: 14px;
       margin: 20px;
-      margin-bottom: 0px
+      margin-bottom: 0px;
   }
 }
