@@ -1,0 +1,37 @@
+<div class="container-fluid d-flex flex-column align-items-cente justify-content-center">
+  <div *ngIf="compliment; else loading">
+    <div class="compliment-card d-flex flex-column">
+      <div class="share image-container">
+        <img src="assets/images/share.svg" alt="">
+      </div>
+      <div class="compliment-text">
+        <p>{{compliment}}</p>
+      </div>
+      <div class="compliment-footer p-3 d-flex justify-content-around">
+        <div class="image-container reaction" [ngClass]="{selected: this.reaction === 'hug'}" (click)="react('hug')">
+          <img src="assets/images/hug.svg" alt="">
+        </div>
+        <div class="image-container reaction" [ngClass]="{selected: this.reaction === 'mixed'}" (click)="react('mixed')">
+          <img src="assets/images/mixed.svg" alt="">
+        </div>
+        <div class="image-container reaction" [ngClass]="{selected: this.reaction === 'neutral'}"(click)="react('neutral')">
+          <img src="assets/images/neutral.svg" alt="">
+        </div>
+        <div class="image-container reaction" [ngClass]="{selected: this.reaction === 'positive'}" (click)="react('positive')">
+          <img src="assets/images/positive.svg" alt="">
+        </div>
+      </div>
+    </div>
+  
+    <div class="row justify-content-around p-4">
+      <div class="col-8">
+        <button class="btn button w-100" routerLink="/">Go back</button>
+      </div>
+    </div>
+  </div>
+  <ng-template #loading>
+    <div class="loading-overlay d-flex align-items-center justify-content-center">
+      <app-loading></app-loading>
+    </div>
+  </ng-template>
+</div>

@@ -17,6 +17,8 @@ import { GetComponent } from './pages/get/get.component';
 import { SecondPageComponent } from './pages/tutorial/second-page/second-page.component';
 import { ThirdPageComponent } from './pages/tutorial/third-page/third-page.component';
 import { HttpClientModule } from '@angular/common/http';
+import { GetSurpriseComponent } from './pages/get-surprise/get-surprise.component';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { HttpClientModule } from '@angular/common/http';
     FirstPageComponent,
     SecondPageComponent,
     ThirdPageComponent,
-    GetComponent
+    GetComponent,
+    GetSurpriseComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,

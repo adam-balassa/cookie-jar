@@ -20,4 +20,15 @@ export class ComplimentService implements OnDestroy {
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }
+
+  popRandomCompliment(): Compliment | null {
+    const compliments = this.compliments.value;
+    if (!compliments.length) {
+      return null;
+    }
+    const randomIndex = Math.floor(Math.random() * compliments.length);
+    const chosenCompliment = compliments.splice(randomIndex, 1)[0];
+    this.compliments.next(compliments);
+    return chosenCompliment;
+  }
 }

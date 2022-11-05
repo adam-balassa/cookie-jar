@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { SurpriseMeComponent } from './components/surprise-me/surprise-me.component';
 import { ComplimentAddedComponent } from './pages/compliment-added/compliment-added.component';
+import { GetSurpriseComponent } from './pages/get-surprise/get-surprise.component';
+import { GetComponent } from './pages/get/get.component';
 import { GiveComponent } from './pages/give/give.component';
 import { MainComponent } from './pages/main/main.component';
 import { FirstPageComponent } from './pages/tutorial/first-page/first-page.component';
@@ -10,7 +13,9 @@ import { ThirdPageComponent } from './pages/tutorial/third-page/third-page.compo
 
 const routes: Routes = [
   { path: 'give', component: GiveComponent },
+  { path: 'get', component: GetComponent },
   { path: 'give/suggest', component: GiveComponent },
+  { path: 'surprise-me', component: GetSurpriseComponent },
   { path: 'added', component: ComplimentAddedComponent },
   { path: 'tutorial/1', component: FirstPageComponent },
   { path: 'tutorial/2', component: SecondPageComponent },

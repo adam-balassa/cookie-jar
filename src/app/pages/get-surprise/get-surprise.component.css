@@ -23,7 +23,7 @@ div {
 }
 
 .compliment-text {
-  padding: 38px 22px;
+  padding: 45px 22px;
 }
 
 .share {
@@ -65,4 +65,13 @@ div {
 
 .reaction:active, .selected {
   transform: scale(1.2);
+}
+
+.loading-overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: #0007;
 }
