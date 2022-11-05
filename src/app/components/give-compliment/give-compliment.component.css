@@ -44,6 +44,15 @@ textarea {
   width: 100%
 }
 
+.shuffle {
+  pointer-events: all;
+  transition: all .2s;
+}
+
+.shuffle:active {
+  transform: scale(1.2);
+}
+
 .inspiration {
   text-align: center;
   line-height: 24px;

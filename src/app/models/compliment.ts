@@ -3,4 +3,5 @@ export interface Compliment {
   annotation: string;
   notes: string[];
   reaction?: string;
+  createdDate: string;
 }

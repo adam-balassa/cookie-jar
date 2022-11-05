@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainComponent } from './pages/main/main.component';
-import { MyButtonComponent } from './components/my-button/my-button.component';
 import { JarComponent } from './components/jar/jar.component';
 import { JarButtonsComponent } from './components/jar/jar-buttons/jar-buttons.component';
 import { SurpriseMeComponent } from './components/surprise-me/surprise-me.component';
@@ -14,12 +13,12 @@ import { AddButtonComponent } from './components/give-compliment/add-button/add-
 import { FormsModule } from '@angular/forms';
 import { ComplimentAddedComponent } from './pages/compliment-added/compliment-added.component';
 import { FirstPageComponent } from './pages/tutorial/first-page/first-page.component';
+import { GetComponent } from './pages/get/get.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    MyButtonComponent,
     JarComponent,
     JarButtonsComponent,
     SurpriseMeComponent,
@@ -27,7 +26,8 @@ import { FirstPageComponent } from './pages/tutorial/first-page/first-page.compo
     GiveComplimentComponent,
     AddButtonComponent,
     ComplimentAddedComponent,
-    FirstPageComponent
+    FirstPageComponent,
+    GetComponent
   ],
   imports: [
     BrowserModule,

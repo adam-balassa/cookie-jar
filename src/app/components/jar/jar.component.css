@@ -2,6 +2,7 @@
   position: relative;
   display: flex;
   justify-content: center;
+  animation: appear .5s;
 }
 
 .jar-button-container {
@@ -18,4 +19,15 @@
 
 h1 {
   font-size: 30px;
+}
+
+@keyframes appear {
+  from {
+    transform: scale(.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }

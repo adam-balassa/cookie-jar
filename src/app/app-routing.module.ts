@@ -7,6 +7,7 @@ import { FirstPageComponent } from './pages/tutorial/first-page/first-page.compo
 
 const routes: Routes = [
   { path: 'give', component: GiveComponent },
+  { path: 'give/suggest', component: GiveComponent },
   { path: 'added', component: ComplimentAddedComponent },
   { path: 'tutorial/1', component: FirstPageComponent },
   { path: '', component: MainComponent }
