@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Compliment } from '../../models/compliment';
 
 @Component({
   selector: 'app-my-button',
@@ -8,7 +9,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class MyButtonComponent implements OnInit {
 
   @Input()
-  displayText: string = '';
+  compliment!: Compliment;
 
   constructor() { }
 
