@@ -1,0 +1,10 @@
+<h1>Hello {{person.name}}!</h1>
+<h2>Fingers:</h2>
+<div>
+  <div *ngFor="let finger of person.fingers">
+    <app-my-button 
+      [displayText]="'Raise ' + finger + ' finger'"
+      *ngIf="!finger.startsWith('t')" 
+      (click)="raiseFinger(finger)"></app-my-button>
+  </div>
+</div>
