@@ -2,19 +2,20 @@
   background-color: var(--yellow);
   height: 100vh;
   padding: 20px;
-  width: 100%
+  width: 100%;
+  padding-bottom: 100px;
 }
 
 .surprise-me-container {
   position: fixed;
   bottom: 0;
   right: 0;
-  padding: 30px;
+  padding: 20px;
 }
 
 .invite-container {
   position: fixed;
   bottom: 0;
   left: 0;
-  padding: 30px;
+  padding: 20px;
 }

@@ -75,3 +75,11 @@
     opacity: 1;
   }
 }
+
+@media screen and (max-width: 450px){
+  .tutorial-text{
+      font-size: 14px;
+      margin: 20px;
+      margin-bottom: 0px;
+  }
+}

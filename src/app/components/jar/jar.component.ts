@@ -21,8 +21,10 @@ export class JarComponent implements OnInit {
   }
 
   updateName(newName: string){
-    this.name = newName;
-    this.nameService.name.next(newName);
+    this.name = newName.replace(/[\n\r\t]/g, '');
+    console.log(this.name);
+    
+    this.nameService.name.next(this.name);
   }
 
 }

@@ -1,11 +1,11 @@
 <div class="d-flex">
   <div class="col-6">
-    <button class="btn jar-button left" [ngClass]="{'disabled': disabled == 'left'}" routerLink="/give">
+    <button class="btn jar-button left" [ngClass]="{'disabled': disabled == 'left'}" [routerLink]="disabled ? '' : '/give'">
       <span>Give</span>        
     </button>
   </div>
   <div class="col-6">
-    <button class="btn jar-button right" [ngClass]="{'disabled': disabled == 'right'}" routerLink="/get">
+    <button class="btn jar-button right" [ngClass]="{'disabled': disabled == 'right'}" [routerLink]="disabled ? '' : '/get'">
       <span>Get</span>        
     </button>
   </div>

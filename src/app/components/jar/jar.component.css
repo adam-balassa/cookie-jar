@@ -12,6 +12,10 @@
   height: 20%;
 }
 
+.image-container {
+  max-height: 80vh;
+}
+
 .jar-title-container {
   position: absolute;
   top: 13%;
