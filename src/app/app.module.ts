@@ -19,6 +19,8 @@ import { ThirdPageComponent } from './pages/tutorial/third-page/third-page.compo
 import { HttpClientModule } from '@angular/common/http';
 import { GetSurpriseComponent } from './pages/get-surprise/get-surprise.component';
 import { LoadingComponent } from './components/loading/loading.component';
+import { InviteButtonComponent } from './components/invite-button/invite-button.component';
+import { InviteComponent } from './pages/invite/invite.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { LoadingComponent } from './components/loading/loading.component';
     ThirdPageComponent,
     GetComponent,
     GetSurpriseComponent,
-    LoadingComponent
+    LoadingComponent,
+    InviteButtonComponent,
+    InviteComponent
   ],
   imports: [
     BrowserModule,

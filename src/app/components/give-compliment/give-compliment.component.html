@@ -11,28 +11,33 @@
     {{ formattedDate }}
   </div>
   <div class="input-container">
-    <textarea [ngModel]="complimentText" (ngModelChange)="onComplimentChange($event)" placeholder="Write something nice to yourself..."></textarea>
+    <textarea 
+      [ngModel]="complimentText" 
+      (ngModelChange)="onComplimentChange($event)" 
+      [placeholder]="'Write something nice to ' + (!invite ? 'yourself' : 'your friend') + '...'"></textarea>
   </div>
-  <a *ngIf="!isSuggested; else suggestedFooter" class="inspiration" routerLink="/give/suggest">
-    Having a hard time coming up with something?
-  </a>
-  <ng-template #suggestedFooter>
-    <div class="row">
-      <div class="col-6">
-        <a class="inspiration" routerLink="/give">
-          Back to free writing mode
-        </a>
-      </div>
-      <div class="col-6 d-flex justify-content-end">
-        <div class="shuffle image-container" (click)="generateRandomSuggestion()">
-          <img src="assets/images/shuffle.svg" alt="">
+  <div *ngIf="!invite">
+    <a *ngIf="!isSuggested; else suggestedFooter" class="inspiration" routerLink="/give/suggest">
+      Having a hard time coming up with something?
+    </a>
+    <ng-template #suggestedFooter>
+      <div class="row">
+        <div class="col-6">
+          <a class="inspiration" routerLink="/give">
+            Back to free writing mode
+          </a>
+        </div>
+        <div class="col-6 d-flex justify-content-end">
+          <div class="shuffle image-container" (click)="generateRandomSuggestion()">
+            <img src="assets/images/shuffle.svg" alt="">
+          </div>
         </div>
       </div>
-    </div>
-  </ng-template>
+    </ng-template>
+  </div>
 </div>
 <div class="button-container py-5 w-100 d-flex justify-content-center">
   <div class="w-75">
-    <app-add-button [disabled]="hateSpeech" (click)="addCompliment()"></app-add-button>
+    <app-add-button [disabled]="hateSpeech" [text]="invite ? 'Copy invite link' : 'Add'" (click)="buttonAction(this.complimentText)"></app-add-button>
   </div>
 </div>

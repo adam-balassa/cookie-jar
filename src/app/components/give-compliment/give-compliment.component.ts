@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { debounceTime, distinctUntilChanged, Subject, subscribeOn } from 'rxjs';
 import { ApiService } from 'src/app/services/api.service';
@@ -19,6 +19,9 @@ const suggestions = [
   styleUrls: ['./give-compliment.component.css']
 })
 export class GiveComplimentComponent implements OnInit {
+  @Input() invite = false;
+  @Input() buttonAction: Function = this.addCompliment;
+
   complimentText: string = '';
   isSuggested: boolean;
   complimentChanges = new Subject<string>();
@@ -43,7 +46,6 @@ export class GiveComplimentComponent implements OnInit {
           case 'mixed': this.currentImage = 'mixed.svg'; break;
           case 'hate': this.currentImage = 'mixed.svg'; this.hateSpeech = true;
         }
-        console.log(this.hateSpeech)
       })
     }
 
@@ -65,7 +67,7 @@ export class GiveComplimentComponent implements OnInit {
     this.complimentText = suggestions[Math.floor(Math.random() * suggestions.length)]
   }
 
-  addCompliment() {
+  addCompliment(_: string) {
     if (this.hateSpeech) {
       return;
     }

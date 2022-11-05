@@ -5,6 +5,7 @@ import { ComplimentAddedComponent } from './pages/compliment-added/compliment-ad
 import { GetSurpriseComponent } from './pages/get-surprise/get-surprise.component';
 import { GetComponent } from './pages/get/get.component';
 import { GiveComponent } from './pages/give/give.component';
+import { InviteComponent } from './pages/invite/invite.component';
 import { MainComponent } from './pages/main/main.component';
 import { FirstPageComponent } from './pages/tutorial/first-page/first-page.component';
 import { FourthPageComponent } from './pages/tutorial/fourth-page/fourth-page.component';
@@ -13,6 +14,7 @@ import { ThirdPageComponent } from './pages/tutorial/third-page/third-page.compo
 
 const routes: Routes = [
   { path: 'give', component: GiveComponent },
+  { path: 'invite', component: InviteComponent },
   { path: 'get', component: GetComponent },
   { path: 'give/suggest', component: GiveComponent },
   { path: 'surprise-me', component: GetSurpriseComponent },

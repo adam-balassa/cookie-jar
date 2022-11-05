@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ComplimentService } from 'src/app/services/compliment.service';
 
 @Component({
   selector: 'app-main',
@@ -7,20 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  person = {
-    name: 'Juho',
-    fingers: [
-      'thumb', 'index', 'middle'
-    ]
+  constructor(service: ComplimentService, router: Router) {
+    const index = router.url.indexOf('invite=') + 7;
+    if (index >= 7) {
+      const invite = atob(decodeURIComponent(router.url.substring(index)));
+      service.compliments.next([...service.compliments.value, {
+        displayText: invite,
+        createdDate: new Date().toDateString().substr(4),
+        annotation: '',
+        notes: []
+      }])
+      router.navigateByUrl('/get')
+    }
   }
-
-  constructor() { }
 
   ngOnInit(): void {
   }
-
-  raiseFinger(finger: string) {
-    console.log(finger);
-  }
-
 }
