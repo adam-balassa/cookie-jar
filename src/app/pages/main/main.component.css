@@ -1,0 +1,13 @@
+.container-fluid {
+  background-color: var(--yellow);
+  height: 100vh;
+  padding: 20px;
+  width: 100%
+}
+
+.surprise-me-container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 30px;
+}

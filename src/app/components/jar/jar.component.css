@@ -1,0 +1,21 @@
+.jar-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.jar-button-container {
+  position: absolute;
+  width: 80%;
+  top: 65%;
+  height: 20%;
+}
+
+.jar-title-container {
+  position: absolute;
+  top: 13%;
+}
+
+h1 {
+  font-size: 30px;
+}

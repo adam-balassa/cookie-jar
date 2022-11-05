@@ -1,0 +1,5 @@
+.container-fluid {
+  background-color: var(--yellow);
+  height: 100vh;
+  padding: 20px
+}

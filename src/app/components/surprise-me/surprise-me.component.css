@@ -1,0 +1,14 @@
+.button-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.image-container {
+  pointer-events: all;
+  transition: all .15s;
+}
+
+.image-container:active {
+  transform: scale(1.1);
+}

@@ -1,0 +1,55 @@
+
+:host {
+  width: 100%;
+}
+
+.give-compliment-card {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  position: relative;
+  padding: 15px 25px;
+  height: 60vh;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 15px;
+  height: 20px;
+}
+
+
+.emoji {
+  height: 55px;
+}
+
+div, textarea::placeholder {
+  color: var(--light);
+  font-size: 20px
+}
+
+.input-container {
+  flex: 1;
+}
+
+textarea {
+  border: transparent;
+  font-size: 20px;
+  margin-top: 10px;
+  height: 100%;
+  width: 100%
+}
+
+.inspiration {
+  text-align: center;
+  line-height: 24px;
+  text-decoration: underline;
+  transition: color .1s;
+}
+
+.inspiration:active {
+  color: #0008;
+}
