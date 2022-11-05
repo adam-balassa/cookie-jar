@@ -11,14 +11,14 @@
     {{ formattedDate }}
   </div>
   <div class="input-container">
-    <textarea placeholder="Write something nice to yourself..."></textarea>
+    <textarea [(ngModel)]="complimentText" placeholder="Write something nice to yourself..."></textarea>
   </div>
   <a class="inspiration">
     Having a hard time coming up with something?
   </a>
 </div>
-<div class="py-5 w-100 d-flex justify-content-center">
+<div class="button-container py-5 w-100 d-flex justify-content-center">
   <div class="w-75">
-    <app-add-button></app-add-button>
+    <app-add-button (click)="addCompliment()"></app-add-button>
   </div>
 </div>

@@ -11,6 +11,7 @@
   position: relative;
   padding: 15px 25px;
   height: 60vh;
+  animation: slide-down .4s;
 }
 
 .close {
@@ -52,4 +53,28 @@ textarea {
 
 .inspiration:active {
   color: #0008;
+}
+
+.button-container {
+  animation: appear .5s;
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

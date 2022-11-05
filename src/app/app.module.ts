@@ -11,6 +11,8 @@ import { SurpriseMeComponent } from './components/surprise-me/surprise-me.compon
 import { GiveComponent } from './pages/give/give.component';
 import { GiveComplimentComponent } from './components/give-compliment/give-compliment.component';
 import { AddButtonComponent } from './components/give-compliment/add-button/add-button.component';
+import { FormsModule } from '@angular/forms';
+import { ComplimentAddedComponent } from './pages/compliment-added/compliment-added.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +24,13 @@ import { AddButtonComponent } from './components/give-compliment/add-button/add-
     SurpriseMeComponent,
     GiveComponent,
     GiveComplimentComponent,
-    AddButtonComponent
+    AddButtonComponent,
+    ComplimentAddedComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

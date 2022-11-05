@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ComplimentService } from './services/compliment.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'cookie-jar';
+  constructor(public complimentService: ComplimentService) {
+    
+  }
 }

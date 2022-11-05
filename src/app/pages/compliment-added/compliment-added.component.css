@@ -1,0 +1,26 @@
+.container-fluid {
+  background-color: var(--yellow);
+  height: 100vh;
+  padding: 20px;
+}
+
+.jar-container {
+  position: relative;
+  animation: appear .5s;
+}
+
+.jar-title-container {
+  position: absolute;
+  top: 23%;
+}
+
+@keyframes appear {
+  from {
+    transform: scale(.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
