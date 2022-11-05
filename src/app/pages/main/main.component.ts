@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ComplimentService } from 'src/app/services/compliment.service';
+import { TutorialService } from 'src/app/services/tutorial.service';
 
 @Component({
   selector: 'app-main',
@@ -9,7 +10,7 @@ import { ComplimentService } from 'src/app/services/compliment.service';
 })
 export class MainComponent implements OnInit {
 
-  constructor(service: ComplimentService, router: Router) {
+  constructor(service: ComplimentService, router: Router, public tutorial: TutorialService) {
     const index = router.url.indexOf('invite=') + 7;
     if (index >= 7) {
       const invite = atob(decodeURIComponent(router.url.substring(index)));

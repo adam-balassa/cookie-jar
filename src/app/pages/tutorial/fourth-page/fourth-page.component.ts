@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { TutorialService } from 'src/app/services/tutorial.service';
 
 @Component({
   selector: 'app-fourth-page',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FourthPageComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(private router: Router, private tutorial: TutorialService) { }
 
   ngOnInit(): void {
+  }
+
+  done() {
+    this.tutorial.completeTutorial();
+    this.router.navigateByUrl('/');
   }
 
 }
